@@ -15,20 +15,18 @@ let when = [
   "during my lunch",
   "while I was praying"
 ];
-function obtenerAleatorio(listas) {
-const indice = Math.floor(Math.random() * lista.length);
-return lista [indice]}
-
-function generarExcusa(){
-  let sujeto = obtenerAleatorio(who);
-  let accion = obtenerAleatorio(action);
-  let objeto = obtenerAleatorio(what);
-  let momento = obtenerAleatorio(when);
-
-  return `${sujeto} ${accion} ${objeto} ${momento}.`;
+function obtenerAleatorio(lista) {
+  const indice = Math.floor(Math.random() * lista.length);
+  return lista[indice];
 }
 
-window.onload = function() {
-  
-  document.querySelector("#excuse").innerHTML = generarExcusa
-};//write your code here
+function generarExcusa() {
+  let quien = obtenerAleatorio(who);
+  let accion = obtenerAleatorio(action);
+  let que = obtenerAleatorio(what);
+  let cuando = obtenerAleatorio(when);
+
+  return `${quien} ${accion} ${que} ${cuando}.`;
+}
+document.querySelector("#excuse").innerHTML = generarExcusa();
+window.onload = function() {}; //write your code here
