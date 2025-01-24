@@ -5,6 +5,13 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
+window.onload = function() {
+  document.querySelector("#btn").addEventListener("click", () => {
+    document.querySelector("#excuse").innerHTML = generarExcusa();
+  });
+  document.querySelector("#excuse").innerHTML = generarExcusa();
+};
+
 let who = ["The dog", "My grandma", "The mailman", "My bird"];
 let action = ["ate", "peed", "crushed", "broke"];
 let what = ["my homework", "my phone", "the car"];
@@ -28,5 +35,3 @@ function generarExcusa() {
 
   return `${quien} ${accion} ${que} ${cuando}.`;
 }
-document.querySelector("#excuse").innerHTML = generarExcusa();
-window.onload = function() {}; //write your code here
